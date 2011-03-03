@@ -1,0 +1,239 @@
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%; 
+	margin: 0px; 
+	padding: 0px;
+}
+
+#map_canvas {
+	height: 100%;
+	width: 100%;
+}
+
+#shadowbox_content {
+	color: white;
+	text-align: center;
+	margin-top: 17px;
+}
+
+#sb-nav-close {
+	display: none;
+}
+
+#addin {
+	height: 45px;
+	width:  475px;
+	font-size: 30px;
+}
+
+#container_box {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	max-width: 100%;
+	min-width: 800px;
+	overflow: auto;
+}
+
+.main_box {
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	opacity:0.7;
+	filter:alpha(opacity=70);
+	background-color: black;
+	position: fixed;
+}
+
+#nav_box {
+	height: 100px;
+	width: 600px;
+	top: 5px;
+	left: 50%;
+	margin-left: -300px;
+}
+
+#list_box {
+	width: 300px;
+	height: 99%;
+	left: 0px;
+	top: 5px;
+	-moz-border-radius-bottomleft: 0px;
+	border-bottom-left-radius: 0px;
+	-moz-border-radius-topleft: 0px;
+	border-top-left-radius: 0px;
+}
+
+#info_box {
+	width: 300px;
+	height: 600px;
+	right: 0px;
+	top: 5px;
+	-moz-border-radius-topright: 0px;
+	border-top-right-radius: 0px;
+	-moz-border-radius-bottomright: 0px;
+	border-bottom-right-radius: 0px;
+}
+
+#filter_box {
+	width: 250px;
+	height:200px;
+	bottom: 0px;
+	left: 50%;
+	margin-left: -125px;
+	-moz-border-radius-bottomleft: 0px;
+	border-bottom-left-radius: 0px;
+	-moz-border-radius-bottomright: 0px;
+	border-bottom-right-radius: 0px;
+}
+
+#social_box{
+	width: 300px;
+	height: 200px;
+	right: 0px;
+	bottom: 0px;
+	-moz-border-radius-topright: 0px;
+	border-top-right-radius: 0px;
+	-moz-border-radius-bottomright: 0px;
+	border-bottom-right-radius: 0px;
+}
+
+#eventDetails {
+float:left;
+padding-right:15px;
+}
+
+#eventTitle {
+ font-family:"Droid Sans", arial, sans-serif;
+ font-size:20px;
+ padding: 1px 0px 10px 0px;
+}
+
+div.detailsColumn {
+ float:left;
+ font-size:12px;
+ width:48%;
+ padding-bottom:13px;
+}
+
+#eventTime {
+	font-size:0.9em;
+}
+
+#eventPrice{
+	padding-top:5px;
+	font-size:1.2em;
+}
+
+#venueName, #venueLoc, #eventPhone {
+ font-size:1.2em;
+}
+
+#eventDesc {
+padding:0px 0 10px 0;
+font-size:0.9em;
+}
+
+a.eventLink {
+ color:white;
+ text-decoration:none;
+}
+
+#thing {
+	text-align: center;
+	font-size: 25px;
+	line-height: 30px;
+}
+
+				.clear{
+					clear: both;
+				}
+				.orange-bg{
+					background: #ffbb00;
+				}
+				.orange-txt{
+					color: #ffbb00;
+				}
+				#filter_box{
+					/* this should go */
+					color: white;
+					width: 50%;
+				}
+				#filter_title{
+					padding: 10px;
+				}
+				#filter_slide_btn, #contact_btn{
+					/*this should go when we add the sprites*/
+					width: 15px;
+					height: 15px;
+					background-color: green;
+					/* not this though */
+					float: left;
+					display: inline;
+					margin: 0 3px;
+					
+				}
+				#filter_title h3{
+					padding: 0;
+					margin: 0;
+					float: left;
+				}
+				#filter_title_icons{
+					float: right;
+				}
+				#filter_body{
+					padding: 10px;
+				}
+				#filter_body table{
+					width: 100%;
+				}
+				#filter_body td{
+					width: 40%;
+				}
+				#info_box{
+					color: white;
+					padding: 10px;
+				}
+				#info_box .eventTitle{
+					font-weight: bold;
+					margin: 10px 0;
+				}
+				#info_box .corner_icon{
+					width: 75px;
+					height: 75px;
+				}
+				#info_box .detailsColumn{
+					width: 50%;
+					float: left;
+				}
+				#list_box{
+					overflow: auto;
+				}
+				#list_box ul{
+					padding: 0;
+					margin: 0;
+					list-style-type: none;
+				}
+				#list_box li{
+					-moz-border-radius: 10px;
+					-webkit-border-radius: 10px;
+					border-radius: 3px;
+					background: #ff9900;
+					padding: 8px;
+					margin: 5px;
+					color: white;
+				}
+				#list_box li div{
+					float: left;
+					height: 15px;
+					width: 15px;
+					margin-right: 5px;
+					-moz-border-radius: 3px;
+					-wekbkit-border-radius: 3px;
+					border-radius: 3px;
+
+					/*take this out! */ background: white;
+				}

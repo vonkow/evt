@@ -1,0 +1,150 @@
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%; 
+	margin: 0px; 
+	padding: 0px;
+}
+
+#map_canvas {
+	height: 100%;
+	width: 100%;
+}
+
+#shadowbox_content {
+	color: white;
+	text-align: center;
+	margin-top: 17px;
+}
+
+#sb-nav-close {
+	/*display: none;*/
+}
+
+#addin {
+	height: 45px;
+	width:  475px;
+	font-size: 30px;
+}
+
+#container_box {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	max-width: 100%;
+	min-width: 800px;
+	overflow: auto;
+}
+
+.main_box {
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	padding: 10px;
+	opacity:0.9;
+	filter:alpha(opacity=90);
+	background-color: white;
+	position: fixed;
+}
+
+#nav_box {
+	height: 100px;
+	width: 600px;
+	top: 5px;
+	left: 50%;
+	margin-left: -300px;
+}
+
+#list_box {
+	width: 300px;
+	height: 99%;
+	left: 0px;
+	top: 5px;
+	-moz-border-radius-bottomleft: 0px;
+	border-bottom-left-radius: 0px;
+	-moz-border-radius-topleft: 0px;
+	border-top-left-radius: 0px;
+}
+
+#info_box {
+	width: 300px;
+	height: 600px;
+	right: 0px;
+	top: 5px;
+	-moz-border-radius-topright: 0px;
+	border-top-right-radius: 0px;
+	-moz-border-radius-bottomright: 0px;
+	border-bottom-right-radius: 0px;
+}
+
+#filter_box {
+	width: 250px;
+	height:200px;
+	bottom: 0px;
+	left: 50%;
+	margin-left: -125px;
+	-moz-border-radius-bottomleft: 0px;
+	border-bottom-left-radius: 0px;
+	-moz-border-radius-bottomright: 0px;
+	border-bottom-right-radius: 0px;
+}
+
+#social_box{
+	width: 300px;
+	height: 200px;
+	right: 0px;
+	bottom: 0px;
+	-moz-border-radius-topright: 0px;
+	border-top-right-radius: 0px;
+	-moz-border-radius-bottomright: 0px;
+	border-bottom-right-radius: 0px;
+}
+
+#eventDetails {
+float:left;
+padding-right:15px;
+}
+
+#eventTitle {
+ font-family:"Droid Sans", arial, sans-serif;
+ font-size:20px;
+ padding: 1px 0px 10px 0px;
+}
+
+div.detailsColumn {
+ float:left;
+ font-size:12px;
+ width:48%;
+ padding-bottom:13px;
+}
+
+#eventTime {
+	font-size:0.9em;
+}
+
+#eventPrice{
+	padding-top:5px;
+	font-size:1.2em;
+}
+
+#venueName, #venueLoc, #eventPhone {
+ font-size:1.2em;
+}
+
+#eventDesc {
+padding:0px 0 10px 0;
+font-size:0.9em;
+}
+
+a.eventLink {
+ color:blue;
+ text-decoration:none;
+}
+
+#thing {
+	text-align: center;
+	font-size: 25px;
+	line-height: 30px;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="js/shadowbox/shadowbox.css">
+		<script type="text/javascript" src="js/shadowbox/shadowbox.js"></script>
+		<script type="text/javascript" src="js/jquery-1.5.1.min.js"></script>
+		<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+		<link href="css/ui-lightness/jquery-ui-1.8.10.custom.css" rel="stylesheet" type="text/css"/>
+    	<script type="text/javascript" src="js/jquery-ui-1.8.10.custom.min.js"></script>
+		<script type="text/javascript" src="js/googlemaps.js"></script>
+	</head>
+	<body onload="detectBrowser();">
+			<div id="map_canvas"></div>
+			<script>
+				function slide(div, direction) {
+					$(div).toggle('slide', {direction: direction}, 500 );
+				};
+			</script>
+			
+			<div id="container_box">
+			<!--********************************NavBox********************************-->
+			<div id="nav_box" class="main_box">
+				<form action="submit" onsubmit="validate_addr(document.getElementById(\'addin2\').value); return false;">
+					<input id="addin2" type="text"></input>
+				</form>
+				<script>document.getElementById("addin2").focus()</script>
+			</div>
+			
+			<!--********************************ListBox********************************-->
+			<div id="list_box" onclick="slide('#list_box', 'left')" class="main_box"></div>
+			
+			<!--********************************InfoBox********************************-->
+			<div id="info_box" onclick="slide('#info_box', 'right')" class="main_box">
+				<div id="eventDetails">
+					<img src="img_trans.gif" class="[category]"/>
+					<div id="eventTitle"> 
+						<a class="eventLink" href="[data.url]">The most Awesomest Event Ever on Earth. </a> 
+					</div>
+					<div class="detailsColumn">
+						<div id="eventTime">Wednesday 02 March 2011, 9:00 PM </div>
+						<div id="eventPrice">Free</div>
+					</div>
+					<div class="detailsColumn">
+						<div id="venueName"> 
+							<a class="venueLink" href="[data.venue.url]">Boston Hall of Music </a> 
+						</div>
+						<div id="venueLoc"> 365 Boylston St, Boston MA</div>
+						<div id="eventPhone"> (617) 304-6073 </div>
+					</div>		
+					<div id="eventDesc"> What an excellent idea, so many people will be here for this event, I just know it! If they arent, they will miss everything! </div>
+				</div>
+			</div>
+			<!--********************************FilterBox********************************-->
+			<div id="filter_box" onclick="slide('#filter_box', 'down')" class="main_box"></div>
+			
+			
+			<!--********************************SocialBox********************************-->
+			<div id="social_box" onclick="slide('#social_box', 'right')" class="main_box"></div>
+			</div>
+	</body>
+</html>

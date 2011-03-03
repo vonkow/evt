@@ -1,0 +1,20 @@
+from django.core import serializers
+from evts.models import *
+import test_parse
+
+evs = test_parse.doIt()
+
+for venue in serializers.deserialize('json', evs['venues']):
+	vs = Venue.objects.filter(z_id=venue.object.z_id)
+	if vs.count() == 0
+		venue.save()
+	# if venue already exists, run a diff and check
+
+for event in serializer.desrialize('json', evs['events']):
+	es = Event.objects.filter(z_id=envet.object.z_id)
+	if es.count():
+		vs = Venue.objects.filter(z_id=event.object.vid)
+		if vs.count() > 0:
+			event.venue = vs[0]
+		event.save()
+	# if event already exists, run a diff and check

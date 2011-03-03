@@ -1,0 +1,80 @@
+<html>
+<head>
+	<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+</head>
+<body>
+<div id="map" style="height:400px;width:600px;"></div>
+<script>
+	var m=(function() {
+		var gm = google.maps,
+			geocoder = new gm.Geocoder(),
+			options = {
+			zoom: 7,
+			center: new gm.LatLng(56.83, 15.16),
+			mapTypeId: gm.MapTypeId.ROADMAP
+		};
+		var map = new gm.Map(document.getElementById('map'), options);
+		var m = new function() {
+			var that = this;
+			this.markers  = [];
+			this.mark = function(la, lo, title) {
+				var mar = new gm.Marker({
+					position: new gm.LatLng(la, lo),
+					map: map,
+					title: title,
+					animation: gm.Animation.DROP
+				})
+				that.markers.push(mar);
+				return mar
+			};
+			this.demark = function(mId) {
+				that.markers[mId].setMap(null);
+				that.markers.splice(mId, 1);
+			}
+			this.demarkAll = function(mId) {
+				while (that.markers.length) that.markers.splice(0,1);
+			};
+			this.iwindows = [];
+			this.iwin  = function(content) {
+				var iw = new gm.InfoWindow({
+					content: content
+				});
+				that.iwindows.push(iw);
+				return iw
+			};
+			this.addBounce = function(mId) {
+				gm.event.addListener(that.markers[mId], 'click', function() {
+					if (this.getAnimation() != null) {
+						this.setAnimation(null);
+					} else {
+						this.setAnimation(gm.Animation.BOUNCE);
+					}
+				})
+			};
+			this.addIwin = function(mId, iId) {
+				var mar = that.markers[mId],
+					iwn = that.iwindows[iId];
+				gm.event.addListener(mar, 'click', function() {
+					iwn.open(map, mar);
+				})
+			};
+			this.codeAddr = function(addr, callback) {
+				geocoder.geocode( { 'address': addr}, function(results, status) {
+					if (status == google.maps.GeocoderStatus.OK) {
+						callback(results);
+					} else {
+						callback(false);
+					}
+				})
+			};
+		};
+		//m.mark(56.8848, 14.7730, 'Place 1!!!');
+		//m.iwin('Hoy!');
+		//m.addIwin(0, 0);
+		//m.addBounce(0);
+		//m.codeAddr("1000 Mass Ave Cambridge MA", alert);
+		return m;
+	})();
+</script>
+</body>
+</html>

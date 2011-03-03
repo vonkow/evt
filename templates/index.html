@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="js/shadowbox/shadowbox.css">
+		<script type="text/javascript" src="js/shadowbox/shadowbox.js"></script>
+		<script type="text/javascript" src="js/jquery-1.5.1.min.js"></script>
+		<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+		<link href="css/ui-lightness/jquery-ui-1.8.10.custom.css" rel="stylesheet" type="text/css"/>
+    	<script type="text/javascript" src="js/jquery-ui-1.8.10.custom.min.js"></script>
+		<script type="text/javascript" src="js/googlemaps.js"></script>
+	</head>
+	<body onload="detectBrowser();">
+			<div id="map_canvas"></div>
+			<script>
+				function slide(div, direction) {
+					$(div).toggle('slide', {direction: direction}, 500 );
+				};
+			</script>
+			
+			<div id="container_box">
+			<!--********************************NavBox********************************-->
+			<div id="nav_box" class="main_box">
+				<form action="submit" onsubmit="validate_addr(document.getElementById(\'addin2\').value); return false;">
+					<input id="addin2" type="text"></input>
+				</form>
+				<script>document.getElementById("addin2").focus()</script>
+			</div>
+			
+			<!--********************************ListBox********************************-->
+			<div id="list_box" onclick="slide('#list_box')" class="main_box">
+				<ul>
+					<li><div class="arts"></div>Example Event</li>
+					<li><div class="arts"></div>Example Event</li>
+					<li><div class="arts"></div>Example Event</li>
+					<li><div class="arts"></div>Example Event</li>
+				</ul>
+			</div>
+			<!--********************************InfoBox********************************-->
+			<div id="info_box" onclick="slide('#info_box', 'right')" class="main_box">
+				<div id="eventDetails">
+					<img src="img_trans.gif" class="corner_icon [category]"/>
+					<div class="eventTitle"> 
+						<a class="eventLink" href="[data.url]">The most Awesomest Event Ever on Earth. </a> 
+					</div>
+					<div class="detailsColumn">
+						<div class="eventTime">Wednesday 02 March 2011, 9:00 PM </div>
+						<div class="eventPrice">Free</div>
+					</div>
+					<div class="detailsColumn">
+						<div class="venueName"> 
+							<a class="venueLink" href="[data.venue.url]">Boston Hall of Music </a> 
+						</div>
+						<div class="venueLoc"> 365 Boylston St, Boston MA</div>
+						<div class="eventPhone"> (617) 304-6073 </div>
+					</div>		
+					<div class="eventDesc"> What an excellent idea, so many people will be here for this event, I just know it! If they arent, they will miss everything! </div>
+				</div>
+			</div>
+			<!--<style type="text/css">
+				#info_box{
+					color: white;
+					padding: 10px;
+				}
+				#info_box .eventTitle{
+					font-weight: bold;
+					margin: 10px 0;
+				}
+				#info_box .corner_icon{
+					width: 75px;
+					height: 75px;
+				}
+				#info_box .detailsColumn{
+					width: 50%;
+					float: left;
+				}
+			</style>-->
+			<!--********************************FilterBox********************************-->
+		<div id="filter_box" onclick="slide('#filter_box')" class="main_box">
+				<div id="filter_title">
+					<h3>Filter Events</h3><div id="filter_title_icons"><div class="contact" id="contact_btn"></div><div  class="" id="filter_slide_btn"></div></div>					
+					<div class="clear"></div>
+				</div>
+				<div id="filter_body">
+					<table><tr>
+						<td><div class="arts">Arts</td><td><div class="music">Music</td>
+					</tr><tr>
+						<td><div class="business">Business</td><td><div class="shopping">Shopping</td>
+					</tr><tr>
+						<td><div class="education">Education</td><td><div class="sports">Sports</td>
+					</tr><tr>
+						<td><div class="food">Food</td><td><div class="other">Other</td>
+					</tr></table>
+				</div>
+			</div>
+			<!--********************************SocialBox********************************-->
+			<div id="social_box" onclick="slide('#social_box', 'right')" class="main_box"></div>
+			</div>
+	</body>
+</html>

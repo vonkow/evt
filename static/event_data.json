@@ -1,0 +1,27 @@
+{
+	"events": [
+		{
+			"name": "Party Time!",
+			"description": "Let's get hammered!!!",
+			"startTime": "2011-02-27 23:00:00",
+			"endTime": "2011-02-27 23:59:59",
+			"phone": "(617) 555-5555",
+			"price": "$5 to $500",
+			"url": "http://reddit.com/r/drunk",
+			"z_id": "9999",
+			"venue": {
+				"name": "The bar",
+				"description": "a real dive",
+				"address": "1000 Mass Ave",
+				"city": "Cambridge",
+				"state": "MA",
+				"zip": "02139",
+				"country": "US",
+				"latitude": "42.3688069",
+				"longitude": "-71.110861",
+				"url": "http://bumwine.com",
+				"z_id": "1"
+			}
+		}
+	]
+}
